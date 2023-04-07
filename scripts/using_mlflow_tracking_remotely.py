@@ -3,7 +3,7 @@ import mlflow
 
 mlflow.set_tracking_uri("databricks")
 os.environ["DATABRICKS_HOST"] = "https://adb-7851734333608688.8.azuredatabricks.net//"
-os.environ["DATABRICKS_TOKEN"] = "dapi919854b931d50edf9a4a77b1b1ac40b3-2"
+os.environ["DATABRICKS_TOKEN"] = ""
 
 # set experiment
 experiment_path = "/Users/alex.barreto@databricks.com/experiments/leclub1"

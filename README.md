@@ -1,6 +1,6 @@
 # telco_churn_mlops
 
-This is a sample project for Databricks, generated via cookiecutter.
+This is a sample end-to-end MLops project for Databricks, generated via _cookiecutter_.
 
 While using this project, you need Python 3.X and `pip` or `conda` for package management.
 
