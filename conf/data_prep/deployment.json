@@ -1,0 +1,32 @@
+{
+  "default": {
+    "jobs": [
+      {
+        "name": "prep_data",
+        "new_cluster": {
+            "spark_version": "11.0.x-cpu-ml-scala2.12",
+            "num_workers": 5,
+            "node_type_id": "i3.2xlarge",
+            "aws_attributes": {
+              "availability": "ON_DEMAND"
+          }
+        },
+        "spark_python_task": {
+          "name": "prep_data",
+          "python_file": "file://telco_churn_mlops/jobs/data/entrypoint.py",
+          "parameters": [
+            "--conf-file",
+            "file://conf/data_prep/data_prep_config.json"
+          ],
+          "libraries": [
+            {
+              "pypi": {
+                "package": "-r telco_churn_mlops/pipelines/requirements.txt"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

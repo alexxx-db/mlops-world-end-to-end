@@ -1,0 +1,32 @@
+{
+  "default": {
+    "jobs": [
+      {
+        "name": "deploy_model",
+        "new_cluster": {
+            "spark_version": "11.0.x-cpu-ml-scala2.12",
+            "num_workers": 5,
+            "node_type_id": "i3.xlarge",
+            "aws_attributes": {
+              "availability": "ON_DEMAND"
+          }
+        },
+        "spark_python_task": {
+          "name": "deploy_model",
+          "python_file": "file://telco_churn_mlops/jobs/deploy/entrypoint.py",
+          "parameters": [
+            "--conf-file",
+            "file://conf/deploy_model/deploy_model_config.json"
+          ],
+          "libraries": [
+            {
+              "pypi": {
+                "package": "-r telco_churn_mlops/pipelines/requirements.txt"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

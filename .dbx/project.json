@@ -1,0 +1,9 @@
+{
+    "environments": {
+        "default": {
+            "profile": "DEFAULT",
+            "workspace_dir": "/Users/alex.barreto/dbx/projects/telco_churn_mlops",
+            "artifact_location": "dbfs:/home/alex.barreto@databricks.com/dbx/telco_churn_mlops"
+        }
+    }
+}
